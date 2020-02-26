@@ -8,7 +8,7 @@
 <script src="ServiceClient.js" charset="utf-8"></script>
 <script type="text/javascript">
     invoke("http://127.0.0.1:8080/jsonp", "sum", {a: 5, b: 10 }, (result) => {
-        console.log(result);
+        console.log(result, 'result');
         window["nmresult"] = result;
     });
     window.setTimeout(()=> {
