@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jsonp</title>
+</head>
+<body>
+<script src="ServiceClient.js" charset="utf-8"></script>
+<script type="text/javascript">
+    invoke("http://127.0.0.1:8080/jsonp", "sum", {a: 5, b: 10 }, (result) => {
+        console.log(result);
+        window["nmresult"] = result;
+    });
+    window.setTimeout(()=> {
+        result = window["nmresult"];
+        console.log(result, "sddas");
+        }, 3000);
+</script>
+</body>
+</html>
